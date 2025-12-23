@@ -1,7 +1,11 @@
 import "./App.css";
 
 function App() {
-  return <></>;
+  return (
+    <>
+      <div data-testid="app-root">App</div>
+    </>
+  );
 }
 
 export default App;
