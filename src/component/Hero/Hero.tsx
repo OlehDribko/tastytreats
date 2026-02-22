@@ -2,7 +2,7 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 
 import HeroButton from "../Buttons/HeroButton";
-import { heroImages } from "../Header/constants";
+import { heroImages } from "../header/constants";
 import {
   ImageWrapper,
   StyledCard,

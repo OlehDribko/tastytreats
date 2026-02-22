@@ -2,7 +2,7 @@ import Box from "@mui/material/Box";
 import { Outlet } from "react-router-dom";
 
 import { layoutPaddingX } from "../../theme/theme";
-import { Header } from "../Header/Header";
+import { Header } from "../header/Header";
 
 type LayoutProps = {
   isDarkMode: boolean;
