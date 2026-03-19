@@ -1,16 +1,15 @@
 import Box from "@mui/material/Box";
 import { useTheme } from "@mui/material/styles";
 import Typography from "@mui/material/Typography";
-import { NavLink } from "react-router-dom";
 
-import { getNavLinkStyles, getNavLinkTypographyStyles } from "./styled";
+import { GetNavLinkStyles, getNavLinkTypographyStyles } from "./styled";
 
 export default function Navigation() {
   const theme = useTheme();
 
   return (
     <Box sx={{ display: "flex", gap: 3 }}>
-      <NavLink to="/" end style={getNavLinkStyles}>
+      <GetNavLinkStyles to="/">
         {({ isActive }) => (
           <Typography
             variant="body1"
@@ -19,9 +18,9 @@ export default function Navigation() {
             Home
           </Typography>
         )}
-      </NavLink>
+      </GetNavLinkStyles>
 
-      <NavLink to="/favorites" style={getNavLinkStyles}>
+      <GetNavLinkStyles to="/favorites">
         {({ isActive }) => (
           <Typography
             variant="body1"
@@ -30,7 +29,7 @@ export default function Navigation() {
             Favorites
           </Typography>
         )}
-      </NavLink>
+      </GetNavLinkStyles>
     </Box>
   );
 }

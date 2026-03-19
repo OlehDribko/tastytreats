@@ -1,7 +1,7 @@
 import { Box } from "@mui/material";
 
 import Switch from "../Switch/Switch";
-import Logo from "./components/Logo";
+import Logo from "./components/Logo/Logo";
 import Navigation from "./components/Navigation";
 
 type HeaderProps = {
@@ -16,8 +16,6 @@ export function Header({ isDarkMode, onDarkModeChange }: HeaderProps) {
       display="flex"
       justifyContent="space-between"
       alignItems="center"
-      paddingTop="28px"
-      // pt1 ( налаштувати під проект стандартні падінги)
     >
       <Navigation />
       <Logo />

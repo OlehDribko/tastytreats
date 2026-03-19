@@ -1,4 +1,6 @@
+import styled from "@emotion/styled";
 import type { Theme } from "@mui/material/styles";
+import { NavLink } from "react-router-dom";
 
 export interface NavLinkTypographyStyleProps {
   isActive: boolean;
@@ -18,7 +20,7 @@ export const getNavLinkTypographyStyles = ({
     color: theme.palette.primary.main,
   },
 });
-export const getNavLinkStyles = () => ({
+export const GetNavLinkStyles = styled(NavLink)(() => ({
   textDecoration: "none",
   display: "inline-flex",
-});
+}));

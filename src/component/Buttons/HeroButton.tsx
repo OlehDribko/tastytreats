@@ -1,20 +1,13 @@
-import Button from "@mui/material/Button";
+import { StyledButton } from "./styled";
 
 export default function HeroButton() {
   return (
-    <Button
+    <StyledButton
       onClick={() => {
         alert("clicked");
       }}
-      sx={(theme) => ({
-        color: theme.palette.primary.contrastText,
-        border: `1px solid ${theme.palette.primary.main}`,
-        padding: "14px 28px",
-        borderRadius: "15px",
-      })}
     >
       Order now
-    </Button>
+    </StyledButton>
   );
 }
-// прибрати інлайн стилі у окремий файл.
