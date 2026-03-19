@@ -1,3 +1,33 @@
-export function header(params: string) {
-  return <div>${params}</div>;
+import { Box } from "@mui/material";
+
+import Switch from "../Switch/Switch";
+import Logo from "./components/Logo/Logo";
+import Navigation from "./components/Navigation";
+
+type HeaderProps = {
+  isDarkMode: boolean;
+  onDarkModeChange: (isDarkMode: boolean) => void;
+};
+
+export function Header({ isDarkMode, onDarkModeChange }: HeaderProps) {
+  return (
+    <Box
+      component="header"
+      display="flex"
+      justifyContent="space-between"
+      alignItems="center"
+    >
+      <Navigation />
+      <Logo />
+      <div>
+        <img
+          src="public/icons/shopping-cart.svg"
+          alt="shopping-cart"
+          width={24}
+          height={24}
+        />
+        <Switch checked={isDarkMode} onChange={onDarkModeChange} />
+      </div>
+    </Box>
+  );
 }

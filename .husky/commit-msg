@@ -1,0 +1,15 @@
+#!/bin/sh
+
+MSG_FILE="$1"
+MSG="$(cat "$MSG_FILE")"
+
+PATTERN='^(feat|fix|chore|refactor|style|test|docs)\([A-Z]+-[0-9]+\): .+'
+
+if ! printf "%s" "$MSG" | grep -Eq "$PATTERN"; then
+  echo "✖ Invalid commit message format."
+  echo "Required: <type>(<TICKET-ID>): <short description>"
+  echo "Example: feat(KAN-1): create main layout"
+  exit 1
+fi
+
+npx --no-install commitlint --edit "$MSG_FILE"
